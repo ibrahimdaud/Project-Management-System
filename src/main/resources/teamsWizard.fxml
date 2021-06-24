@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+<BorderPane prefHeight="450.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.COMP1815.java.controllers.TeamsWizardController">
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="58.0" prefWidth="431.0" spacing="20.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#cancel" prefWidth="180.0" text="Cancel"/>
+            <Button mnemonicParsing="false" onAction="#add" prefWidth="180.0" text="Add to your team"/>
+            <Button layoutX="304.0" layoutY="26.0" mnemonicParsing="false" onAction="#rem" prefWidth="180.0"
+                    text="Remove from your team"/>
+            <Button mnemonicParsing="false" onAction="#save" prefWidth="180.0" text="Save"/>
+         </children>
+      </HBox>
+   </bottom>
+   <center>
+      <HBox prefHeight="100.0" prefWidth="200.0" spacing="30.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="CENTER" prefHeight="317.0" prefWidth="250.0" spacing="23.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Available Users"/>
+                  <ListView fx:id="viableUsers" prefHeight="200.0"/>
+               </children>
+               <padding>
+                  <Insets left="10.0"/>
+               </padding>
+            </VBox>
+            <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="317.0" prefWidth="250.0" spacing="23.0"
+                  HBox.hgrow="ALWAYS">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Your team"/>
+                  <ListView fx:id="myTeam" prefHeight="200.0"/>
+                  <TextField fx:id="teamName" promptText="Team name"/>
+               </children>
+               <padding>
+                  <Insets right="10.0"/>
+               </padding>
+            </VBox>
+         </children>
+      </HBox>
+   </center>
+</BorderPane>

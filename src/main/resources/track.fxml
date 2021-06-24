@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Text?>
+<BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.COMP1815.java.controllers.TrackController">
+    <center>
+        <ListView fx:id="tasks" prefHeight="497.0" prefWidth="433.0"/>
+    </center>
+    <bottom>
+        <HBox alignment="CENTER" spacing="20.0" BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+                <Insets bottom="10.0" top="10.0"/>
+            </BorderPane.margin>
+            <children>
+                <Button mnemonicParsing="false" onAction="#back" text="Back"/>
+                <ProgressBar fx:id="progress" prefWidth="200.0" progress="0.0"/>
+                <Text fx:id="end" strokeType="OUTSIDE" strokeWidth="0.0" text="cannot calculate end date"/>
+            </children>
+        </HBox>
+    </bottom>
+</BorderPane>

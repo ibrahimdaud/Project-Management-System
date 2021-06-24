@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.COMP1815.java.controllers.CreationWizardController">
+    <bottom>
+        <HBox alignment="CENTER" prefHeight="42.0" prefWidth="600.0" spacing="10.0" BorderPane.alignment="CENTER">
+            <Button fx:id="back" disable="true" mnemonicParsing="false" onAction="#back" text="&lt; Back" />
+            <Button fx:id="next" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#next" text="Next &gt;" />
+            <Button layoutX="66.0" layoutY="10.0" mnemonicParsing="false" onAction="#cancel" text="Cancel">
+                <HBox.margin>
+                    <Insets left="15.0" />
+                </HBox.margin>
+            </Button>
+        </HBox>
+    </bottom>
+    <center>
+        <StackPane BorderPane.alignment="CENTER">
+            <children>
+                <AnchorPane fx:id="teamsView" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;">
+                    <children>
+                        <TextField fx:id="taskName" layoutX="228.0" layoutY="57.0" promptText="Task name" />
+                        <TextArea fx:id="taskDescription" layoutX="208.0" layoutY="91.0" prefHeight="132.0" prefWidth="200.0" promptText="Task description" />
+                        <ListView fx:id="tasks" layoutX="34.0" layoutY="57.0" prefHeight="200.0" prefWidth="150.0" />
+                        <Text layoutX="93.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tasks" />
+                        <Text layoutX="74.0" layoutY="283.0" onMouseClicked="#removeTask" strokeType="OUTSIDE" strokeWidth="0.0" text="Remove task" underline="true" />
+                        <Button layoutX="267.0" layoutY="287.0" mnemonicParsing="false" onAction="#addTask" text="Add task" />
+                        <TextField fx:id="taskDuration" layoutX="228.0" layoutY="230.0" promptText="Task minimum duration" />
+                        <Separator layoutX="194.0" layoutY="31.0" orientation="VERTICAL" prefHeight="297.0" prefWidth="8.0" />
+                        <ListView fx:id="dependencies" layoutX="420.0" layoutY="57.0" prefHeight="200.0" prefWidth="150.0" />
+                        <Text layoutX="456.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dependencies" />
+                        <Button layoutX="46.0" layoutY="301.0" mnemonicParsing="false" onAction="#addAsDependency" text="Add as dependency" />
+                        <Button layoutX="428.0" layoutY="265.0" mnemonicParsing="false" onAction="#removeDependency" text="Remove dependency" />
+                    </children>
+                </AnchorPane>
+                <AnchorPane fx:id="tasksView" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;">
+                    <children>
+                        <ListView fx:id="teams" layoutX="69.0" layoutY="79.0" prefHeight="200.0" prefWidth="200.0" />
+                        <Button fx:id="assign" layoutX="304.0" layoutY="306.0" mnemonicParsing="false" text="Assign" />
+                        <Button fx:id="unsign" layoutX="240.0" layoutY="306.0" mnemonicParsing="false" text="Unsign" />
+                        <ListView fx:id="teams1" layoutX="332.0" layoutY="79.0" prefHeight="200.0" prefWidth="200.0" />
+                        <Text layoutX="124.0" layoutY="302.0" onMouseClicked="#newTeamWizard" strokeType="OUTSIDE" strokeWidth="0.0" text="create new team" underline="true" />
+                    </children>
+                </AnchorPane>
+                <AnchorPane fx:id="startPane" style="-fx-background-color: white;">
+                    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <HBox alignment="CENTER" prefHeight="49.0" prefWidth="600.0" spacing="20.0">
+                            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Name of the project" />
+                            <TextField fx:id="projectName" alignment="CENTER" promptText="Project name" />
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="49.0" prefWidth="600.0" spacing="20.0">
+                            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Start time                     " />
+                            <TextField fx:id="startTime" alignment="CENTER" promptText="dd/mm/yyyy" />
+                        </HBox>
+                    </VBox>
+                    <Separator layoutX="200.0" layoutY="286.0" prefHeight="0.0" prefWidth="500.0" style="-fx-border-style: solid; -fx-border-width: 0 0 1 0; -fx-border-color: black;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" />
+                </AnchorPane>
+            </children>
+        </StackPane>
+    </center>
+</BorderPane>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #6F8695;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.COMP1815.java.controllers.MenuController">
+    <Text fill="#393333" layoutX="68.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Project Management System" textAlignment="CENTER" wrappingWidth="464.21630859375">
+        <font>
+            <Font name="Apple Braille Outline 6 Dot" size="21.0" />
+        </font>
+    </Text>
+    <Circle fill="#d04141" layoutX="583.0" layoutY="20.0" onMouseClicked="#close" radius="10.0" stroke="#680707" strokeType="INSIDE" />
+    <Text layoutX="580.0" layoutY="24.0" mouseTransparent="true" strokeType="OUTSIDE" strokeWidth="0.0" text="x" />
+    <VBox alignment="CENTER" layoutX="226.0" layoutY="100.0" prefHeight="200.0" prefWidth="148.0" spacing="30.0">
+        <Button layoutX="10.0" layoutY="95.0" mnemonicParsing="false" onAction="#createProject" prefWidth="200.0" style="-fx-border-color: #1C448E; -fx-background-color: transparent; -fx-text-fill: #cec288;" text="Create new project" />
+        <Button mnemonicParsing="false" onAction="#loadProject" prefWidth="200.0" style="-fx-border-color: #1C448E; -fx-background-color: transparent; -fx-text-fill: #cec288;" text="Load project" />
+        <Button layoutX="10.0" layoutY="66.0" mnemonicParsing="false" onAction="#alterProject" prefWidth="200.0" style="-fx-border-color: #1C448E; -fx-background-color: transparent; -fx-text-fill: #cec288;" text="Modify project" />
+    </VBox>
+</AnchorPane>
